@@ -55,14 +55,14 @@ Widget titleSection = Container(
             ),
             Text('Kandersteg, Switzerland',
                 style: TextStyle(color: Colors.grey[500])),
-            Icon(
-              Icons.star,
-              color: Colors.red[500],
-            ),
-            Text('41'),
           ],
         ),
-      )
+      ),
+      Icon(
+        Icons.star,
+        color: Colors.red[500],
+      ),
+      Text('41'),
     ],
   ),
 );
@@ -74,17 +74,20 @@ class Home extends StatelessWidget {
       appBar: AppBar(title: Text('Flutter layout demo application')),
       body: Column(
         children: [
-               Image.asset(            
-                    'images/cake.jpg',            
-                    width: 600,            
-                    height: 240,            
-                    fit: BoxFit.cover,            
-              ),
-              titleSection, textSection],
+          Image.asset(
+            'images/cake.jpg',
+            width: 600,
+            height: 240,
+            fit: BoxFit.cover,
+          ),
+          titleSection,
+          textSection
+        ],
       ),
     );
   }
 }
+
 
 void main() => runApp(MaterialApp(
       title: "Flutter layout demo",
